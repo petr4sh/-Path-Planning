@@ -1,0 +1,137 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LR5_poly_mov
+{
+    public partial class Form1 : Form
+    {
+        // Хранение данных полигонов
+        private List<List<PointF>> polygons = new List<List<PointF>>();
+        Point start = new Point(10, 10);
+        Point finish = new Point(620, 380);
+
+        public Form1()
+        {
+            InitializeComponent();
+            startXBox.Text = "10";
+            startYBox.Text = "10";
+            finishXBox.Text = "620";
+            finishYBox.Text = "380";
+            mapBox.Paint += pictureBoxMap_Paint;
+        }
+
+        // Загрузка карты
+        private void mapDownload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.csv)|*.csv";
+            openFileDialog.DefaultExt = "csv";
+            DialogResult result = openFileDialog.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog.FileName;
+                try
+                {
+                    string[] text = File.ReadAllLines(file);
+                    // Загрузка и парсинг файла
+                    polygons = LoadPolygonsFromCsv(file);
+                    showListBox();
+                    mapBox.Invalidate();
+
+                    SaveWay.Enabled = false;
+                    setPosBtn.Enabled = true;
+                    bfs.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка загрузки файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        // Загрузка и парсинг файла
+        private List<List<PointF>> LoadPolygonsFromCsv(string filePath)
+        {
+            var loadedPolygons = new List<List<PointF>>();
+
+            foreach (string line in File.ReadAllLines(filePath))
+            {
+                // Пропускаем пустые строки
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                // Разделяем координаты
+                var points = line.Split(';')
+                                 .Select(coord =>
+                                 {
+                                     var parts = coord.Split(',');
+                                     return new PointF(float.Parse(parts[0]), float.Parse(parts[1]));
+                                 })
+                                 .ToList();
+
+                loadedPolygons.Add(points);
+            }
+
+            return loadedPolygons;
+        }
+
+        // Отображение в ListBox
+        private void showListBox()
+        {
+            foreach (var polygon in polygons)
+            {
+                mapListBox.Items.Add(string.Join(", ", polygon.Select(p => $"({p.X}, {p.Y})")));
+            }
+        }
+
+        // Отрисовка карты
+        private void pictureBoxMap_Paint(object sender, PaintEventArgs e)
+        {
+            if (polygons == null || polygons.Count == 0)
+                return;
+
+            Graphics g = e.Graphics;
+
+            // Закрашиваем фон белым
+            g.Clear(Color.White);
+
+            // Отображаем каждый полигон
+            using (Brush obstacleBrush = new SolidBrush(Color.Gray))
+            {
+                foreach (var polygon in polygons)
+                {
+                    // Масштабируем координаты
+                    var scaledPolygon = polygon.Select(p => new PointF(p.X * 40, mapBox.Height - p.Y * 40)).ToArray();
+
+                    // Рисуем полигон
+                    g.FillPolygon(obstacleBrush, scaledPolygon);
+                }
+            }
+
+            g.FillEllipse(new SolidBrush(Color.Green), start.X, start.Y, 10, 10);
+            g.FillEllipse(new SolidBrush(Color.Blue), finish.X, finish.Y, 10, 10);
+        }
+
+        private void setPosBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                start = new Point(int.Parse(startXBox.Text) / 10 * 10, int.Parse(startYBox.Text) / 10 * 10);
+                finish = new Point(int.Parse(finishXBox.Text) / 10 * 10, int.Parse(finishYBox.Text) / 10 * 10);
+                mapBox.Invalidate();
+            }
+            catch
+            {
+                MessageBox.Show("Старт/Финиш введен неверно!");
+            }
+        }
+    }
+}

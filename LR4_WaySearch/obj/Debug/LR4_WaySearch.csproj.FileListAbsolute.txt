@@ -1,0 +1,10 @@
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\bin\Debug\LR4_WaySearch.exe.config
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\bin\Debug\LR4_WaySearch.exe
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\bin\Debug\LR4_WaySearch.pdb
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.csproj.AssemblyReference.cache
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.Form1.resources
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.Properties.Resources.resources
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.csproj.GenerateResource.cache
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.csproj.CoreCompileInputs.cache
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.exe
+C:\Users\fedot\source\repos\Movement_5s\LR4_WaySearch\obj\Debug\LR4_WaySearch.pdb

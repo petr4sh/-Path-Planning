@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{560D8B57-32A0-45AB-AAF5-1EBE6104DCF9}|LR5_poly_mov.csproj|c:\\users\\fedot\\source\\repos\\movement_5s\\lr5_poly_mov\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{560D8B57-32A0-45AB-AAF5-1EBE6104DCF9}|LR5_poly_mov.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{560D8B57-32A0-45AB-AAF5-1EBE6104DCF9}|LR5_poly_mov.csproj|C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{560D8B57-32A0-45AB-AAF5-1EBE6104DCF9}|LR5_poly_mov.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAAAuwOsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:58:51.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\fedot\\source\\repos\\Movement_5s\\LR5_poly_mov\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T15:23:49.385Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

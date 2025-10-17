@@ -1,0 +1,10 @@
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\bin\Debug\LR5_poly_mov.exe.config
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\bin\Debug\LR5_poly_mov.exe
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\bin\Debug\LR5_poly_mov.pdb
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.csproj.AssemblyReference.cache
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.Form1.resources
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.Properties.Resources.resources
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.csproj.GenerateResource.cache
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.csproj.CoreCompileInputs.cache
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.exe
+C:\Users\fedot\source\repos\Movement_5s\LR5_poly_mov\obj\Debug\LR5_poly_mov.pdb
